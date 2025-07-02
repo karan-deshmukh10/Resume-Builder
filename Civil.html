@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styling/civil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<!-- resume form start-->
+<div class="left-side">
+    <div id="cv-form">
+      <div class="header text-center bg-dark text-light">
+        <h2>Resume Form</h2>
+        <h4>Your professional story starts with Me!</h4>
+      </div>
+      <div class="container mt-3 container-form">
+        <div class="row">
+          <div class="col-md-6 mt-2">
+            <h3>Personal Information</h3>
+            <div class="form-group mt-3">
+              <label for="namefield"> Your Name</label>
+              <input type="text" id="namefield" class="form-control" placeholder="Enter your name" />
+            </div>
+            <div class="form-group mt-3">
+              <label for="addressfield">Your Address</label>
+              <input type="text" id="addfield" class="form-control" placeholder="Amravati,Maharashtra" />
+            </div>
+           
+            <div class="form-group mt-2">
+              <label for="contactfield"> Your Contact No.</label>
+              <input type="number" id="contactfield" class="form-control" placeholder="Enter your Contact Number" />
+            </div>
+            <div class="form-group mt-3">
+              <label for="emailfield"> Your Email Id</label>
+              <input type="email" id="emailfield" class="form-control" placeholder="Enter your email id " />
+            </div>
+            <div class="form-group mt-3">
+              <label for="objective">Summary</label>
+              <textarea id="objective" class="form-control" placeholder="ex: An enthusiastic self-starter Engineer with strong leadership and communication skills,proven academic achievements and possess the right technical and soft skills required to propel the organization achieving its goals and objective and make the difference."></textarea>
+            </div>
+           
+            
+           
+          </div>
+
+          <div class="col-md-6 mt-2">
+            <h3>Professional Information</h3>
+            <label for="TechnicalSkill">Technical Skill:</label>
+              <div id="TechContainer">
+                <div class="TechDetails">
+                  <input type="text" class="form-control TechInput" placeholder="AutoCAD Civil 3D, MicroStation, ArcGIS, Minitab, GIS software, MS Access." id="techskill">
+                </div>
+              </div>
+              <div class="form-group mt-3" id="Pe">
+                <label for="Certification">Certifications:</label>
+                <div id="CertiContainer">
+                  <div class="CertiDetails">
+                    <input type="text" class="form-control CertiInput" placeholder="Certificate Title ex : Project Managment Professional(PMI)" id="certificate">
+                    <textarea class="form-control certidescriptionInput" placeholder="Certificate Description ex : Completed Project Management Professional course offered by Project Management Institute (PMI) ___. "
+                      id="certidescp"></textarea>
+                  </div>
+                  <button class="deleteButtonC" onclick="clearCertiDetails(this)">delete</button>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="container text-center mt-2" id="addCertiButton">
+                  <button onclick="addNewCerti()" class="btn btn-warning btn-sm">
+                    Add Another Certification
+                  </button>
+                </div>
+              </div>
+  
+              <div class="form-group mt-2" id="Ee">
+                <label for="eduexpi">Education:</label>
+                
+                <div id="eduExperienceContainer">
+                  <div class="eduExperience">
+                    <input type="text" class="form-control clgInput" placeholder="School/College" id="clg">
+                    <input type="text" class="form-control PlaceInput" placeholder="City/State/District" id="plc">
+                    <p>Add Graduation | HSC | SSC etc course details</p>
+                    <input type="text" class="form-control degInput" placeholder="Degree/Course" id="course">
+                    
+                    <input type="number" class="form-control startYearInput" placeholder="Start Year" id="startYear">
+                    <input type="number" class="form-control endYearInput" placeholder="End Year" id="endYear">
+                    <input type="text" class="form-control percentInput" placeholder="CGPA/Percentage% ex:CGPA:7.2 or Percentage:90%" id="percent">
+                  </div>
+                  <button class="deleteButtons" onclick="clearEduExperience(this)">delete</button>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="container text-center mt-2" id="addEducationButton">
+                  <button onclick="addNewEdu()" class="btn btn-warning btn-sm">
+                    Add Another Education
+                  </button>
+                </div>
+              </div>
+  
+              <div class="form-group mt-3" id="we">
+                <label for="workexpi">Work Experience</label>
+                <div id="workExperienceContainer">
+                  <div class="workExperience">
+                    <input type="text" class="form-control roleInput" placeholder="Role" id="workrole">
+                    <input type="text" class="form-control companyInput" placeholder="company name" id="compname">
+                    <input type="text" class="form-control durationInput" placeholder="Duration ex: 2020-2021 or 1 jan 2020 - 31 dec 2021" id="wd">
+                  
+                  </div>
+                  <button class="deleteButton" onclick="clearworkExperience(this)">delete</button>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="container text-center mt-2" id="addExperienceButton">
+                  <button onclick="addNewExp()" class="btn btn-warning btn-sm">
+                    Add another experience
+                  </button>
+                </div>
+              </div>
+              
+              <div class="form-group mt-3" id="Pe">
+                <label for="projdetails">Project Details:</label>
+                <div id="projectDetailsContainer">
+                  <div class="projDetails">
+                    <input type="text" class="form-control titleInput" placeholder="Project Title" id="title">
+                    <textarea class="form-control projdescriptionInput" placeholder="Description"
+                      id="projdescp"></textarea>
+                  </div>
+                  <button class="deleteButtonP" onclick="clearProjDetails(this)">delete</button>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="container text-center mt-2" id="addprojectButton">
+                  <button onclick="addNewProj()" class="btn btn-warning btn-sm">
+                    Add Another Project
+                  </button>
+                </div>
+              </div>
+  
+              <div class="form-group mt-3" id="Acti">
+                <label for="Activity">Activities Details:</label>
+                <div id="ActivitiesDetailContainer">
+                  <div class="ActivityDetails">
+                    <input type="text" class="form-control ActiTitleInput" placeholder="Activity Title" id="ActiviTitle">
+                    <input type="text" class="form-control durInput" placeholder="Activity Duration ex: 2020-2021 or 1 jan 2020 - 31 dec 2021" id="Ad">
+                    <textarea class="form-control ActivitydescriptionInput" placeholder="Description Of The Activity"
+                      id="Actividescp"></textarea>
+                  </div>
+                  <button class="deleteButtonAct" onclick="clearActiDetails(this)">delete</button>
+                  <div style="clear: both;"></div>
+                </div>
+                <div class="container text-center mt-2" id="addActivityButton">
+                  <button onclick="addNewActi()" class="btn btn-warning btn-sm">
+                    Add Another Activity
+                  </button>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+          <div class="tip">
+            <ul>
+              <li>
+                Tip: If you want any section not to be displayed on your Resume just don't fill that particular section. leave it empty!
+              </li>
+              <li>
+                Tip: Fill the form and hit the Generate Resume Button Your entered Information will be updated in the below Template.
+              </li>
+            </ul>
+          </div>
+          <!-- Save and Delete Progress Buttons -->
+          <div class="container text-center mt-4">
+            <button id="saveProgressButton" class="btn btn-warning btn-large">Save Progress</button>
+            <button id="deleteProgressButton" class="btn btn-warning btn-large">Delete Progress</button>
+           </div>
+
+          <div class="container text-center my-4">
+            <button id="generateButton" class="btn btn-warning btn-large">
+              Generate Resume 
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- resume form end -->
+    <div class="resume-container">
+        <div class="header">
+            <h1 id="nameTC">Name</h1>
+            <p class="pdt">
+              <i class="bi bi-geo-alt-fill"></i> <span id="addTC">Amravati - Maharashtra</span> | 
+              <i class="bi bi-envelope-fill"></i> <span id="EmailTC">your.email@example.com</span> | 
+              <i class="bi bi-telephone-fill"></i> <span id="numberTC">Contact Number</span>
+          </p>
+          
+        </div>
+        <div class="objectives">
+          <h2>SUMMARY</h2>
+          <ul>
+            <li>
+              An enthusiastic self-starter Engineer with strong leadership and communication skills,proven academic achievements and possess the right technical and soft skills required to propel the organization achieving its goals and objective and make the difference.
+            </li>
+          </ul>
+      </div>
+        
+        
+
+
+
+        <div class="section education">
+            <h2>EDUCATION</h2>
+            <div class="edu-experience">
+                    <p id="Loc">City,State</p>
+                    <ul>
+                      <li>
+                        <h3 id="ClgName">Your School/College</h3>
+                      </li>
+                    </ul>
+                        <p id="courseTC">Degree/Course Name</p>
+                        <p id="eduTC">Start Year</p>
+                        <p id="eduT2C"> End Year</p>
+                        <p id="perctc">CGPA/Percentage%</p>
+            </div>
+        </div>
+
+        <div class="section work-experience">
+            <h2>WORK EXPERIENCE</h2>
+            <div class="experience">
+              <p id="wdTC"> Work Duration</p>
+                    <ul>
+                      <li>
+                        <h3>Company Name</h3>
+                      </li>
+                    </ul>
+                    <p>Your Role</p>
+            </div>
+        </div>
+
+        <div class="section volunteering">
+            <h2>PROJECTS</h2>
+            <div class="entry">
+                <ul>
+                  <li>
+                    <h3>Bridge Construction Model</h3>
+                  </li>
+                </ul>
+                <p>- Construct a scale model of a bridge using materials like balsa wood or steel rods.The project involves researching different types of bridges.</p>
+            </div>
+        </div>
+
+        <div class="section activities">
+            <h2>ACTIVITIES</h2>
+            <div class="entry">
+                <ul>
+                  <li>
+                    <h3>Site Visit to High-Rise Building Construction Site</h3>
+                  </li>
+                </ul>
+                <p class="location">City</p>
+                <p>Safety Coordinator</p>
+                <p>12 Jan 2024</p>
+                <p>- During this feild visit, I served as a Safety Coordinator.My primary responsibility was to ensure the safety and well-being of all the participants throughout the duration of the visit __..</p>
+            </div>
+        </div>
+
+        <div class="certify">
+          <h2>CERTIFICATIONS</h2>
+          <div class="certiT">
+            <ul>
+              <li>
+                <h3>Project Management Professional</h3>
+              </li>
+            </ul>
+           <p>- Completed Project Management Professional course offered by Project Management Institute (PMI) ___.</p>
+          </div>
+        </div>
+
+        <div class="Tskill">
+            <h2>TECHNICAL SKILLS</h2>
+            
+          <div class="Tsk">
+            <P> AutoCAD Civil 3D, MicroStation, ArcGIS, Minitab, GIS software, MS Access.</P>
+          </div>
+                
+            
+        </div>
+        <footer id="copyrightFooter">
+            <div class="footer-content">
+                <p>&copy; 2025 | Resume Template | sakshiphale </p>
+            </div>
+        </footer>
+    </div>
+
+     <!-- Add this checkbox -->
+  <div id="removeFooterCheckboxContainer" class="checkbox mt-3 text-center">
+    <input type="checkbox" id="removeFooterCheckbox"> Remove Copyright Footer
+  </div> 
+
+  <div class="container mt-3 text-center">
+    <button class="download" id="downloadButton">Download Resume <i class="bi bi-download"></i></button>
+  </div>
+
+  <script src="/scripts/civil.js"></script>
+  <script>
+    document.getElementById("generateButton").addEventListener("click", generateResumeButton);
+    
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding-top: 50px; /* Added padding to move content down */
+}
+
+h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+h2 {
+    margin: 2rem 0 1rem 0; /* Adjust margin for spacing */
+    font-size: 2rem;
+    color: #fff;
+}
+
+.profession-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profession-box {
+    background: #ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.profession-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8), rgba(76, 161, 175, 0.8));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profession-box:hover::before,
+.profession-box:focus::before {
+    opacity: 1;
+}
+
+.profession-box img {
+    max-height: 250px;
+    max-width: 250px;
+    margin-bottom: 1rem;
+}
+
+.profession-box p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.profession-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profession-box:active {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .profession-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profession-box {
+        width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .profession-box img {
+        max-height: 200px;
+        max-width: 200px;
+        margin-bottom: 0.5rem;
+    }
+
+    .profession-box p {
+        font-size: 1rem;
+    }
+}

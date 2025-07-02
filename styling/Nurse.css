@@ -1,0 +1,511 @@
+/* Resume form styling  */
+
+.container-form {
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #1d1d1d;
+  color:white;
+}
+
+#cv-form  {
+  padding: 20px;
+  background-color: rgb(55, 55, 53);
+  
+}
+#cv-form .header{
+  box-sizing: border-box;
+  border-radius: 20px 20px 20px 20px;
+}
+.container button{
+  box-sizing: border-box;
+  border-radius: 20px 20px 20px 20px;
+  font-weight: bold;
+  font-family: 'Roboto' sans-serif;
+  color:#f8f8f8;
+  background-color: #333;
+  
+
+}
+
+
+
+#cv-form h2 {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 60px;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom left,#553c9a,#ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+}
+#cv-form h4{
+  padding-bottom: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  background-image: radial-gradient(circle,#553c9a,#ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+/* #cv-template {
+  display: none;
+} */
+
+.container-form h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 600;
+  background-image: conic-gradient(#553c9a,#ee4b2b,#00c2cb);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* h1 .nameT {
+  text-transform: capitalize;
+} */
+.personal-information #nameT {
+  font-size: 20px; /* Adjust the size as needed */
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.container-form .workExperience {
+  padding: 20px;
+}
+
+.container-form .workExperience input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.container-form #workExperienceContainer {
+  position: relative;
+}
+
+
+
+
+
+.container-form .eduExperience {
+  padding: 20px;
+}
+.container-form #eduExperienceContainer{
+  position:relative;
+}
+.container-form .eduExperience input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+.container-form .deleteButton {
+  position: relative;
+  margin-top: 5px;
+  right: 0;
+  margin-right: -15px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: red;
+  padding: 3px 10px;
+}
+.container-form .deleteButtons {
+  position:relative;
+  top: -5px;
+  right: 0;
+  /* margin-top: 4px; */
+  margin-right: -15px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: red;
+  padding: 3px 10px;
+
+}
+.container-form .deleteButtonP {
+  position:relative;
+  top: -5px;
+  right: 0;
+  /* margin-top: 4px; */
+  margin-right: -15px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: red;
+  padding: 3px 10px;
+}
+.container-form .deleteButtonC {
+  position:relative;
+  top: -5px;
+  right: 0;
+  
+  margin-right: -15px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: red;
+  padding: 3px 10px;
+}
+.container-form .deleteButtonh{
+position:relative;
+margin-top: 10px;
+right: 0;
+/* margin-top: 4px; */
+margin-right: -15px;
+border-radius: 50%;
+background-color: transparent;
+color: red;
+padding: 3px 10px;
+}
+.container-form .deleteButtonSk {
+  position:relative;
+margin-top: 10px;
+right: 0;
+/* margin-top: 4px; */
+margin-right: -15px;
+border-radius: 50%;
+background-color: transparent;
+color: red;
+padding: 3px 10px;
+}
+.container-form .deleteButtonTh{
+  position:relative;
+  margin-top: 10px;
+  right: 0;
+  /* margin-top: 4px; */
+  margin-right: -15px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: red;
+  padding: 3px 10px;
+}
+.container-form .eduExperience input {
+  margin-bottom: 10px; 
+}
+
+.container-form .CertiDetails input,
+.container-form .CertiDetails textarea {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.container-form .CertiDetails {
+  padding: 20px;
+}
+.container-form #CertiContainer {
+  position: relative;
+}
+.container-form .SkillDetails input{
+  margin-bottom: 10px;
+  width: 100%;
+}
+.container-form .SkillDetails {
+  padding: 20px;
+}
+.container-form #SkillContainer {
+  position: relative;
+}
+.container-form #TheraContainer {
+  position: relative;
+}
+.container-form .TheraDetails {
+  padding: 20px;
+}
+.container-form .TheraDetails input{
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Resume Form Styling Ends Here */
+
+
+/* Resume Template Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0px;
+  padding: 0px;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.instr {
+  text-align: center;
+  margin-top: 10px;
+}
+.tip li{
+  text-align:justify ;
+  margin-top: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  background-image: conic-gradient(#ee4b2b,#00c2cb);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  list-style:disc ;
+}
+
+#addT{
+  text-align: center;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 15px;
+  /* border-bottom: 2px solid #333; */
+}
+
+
+.social-links p {
+  margin: 0 10px;
+}
+
+.objectives h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.work-experience h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.certify h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.certify p{
+  margin: 5px 0;
+}
+.Skillt h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#weT{
+  float: right;
+    font-style: italic;
+}
+.experience h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-left: 2px; */
+}
+.project h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+.certify .certiT h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+.edu-experience h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  /* margin-left: 2px; */
+}
+
+#roleT{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+
+.edu-experience p{
+  margin: 5px 0;
+}
+.Thera p{
+  margin: 5px 0;
+}
+.edu-experience ul,li{
+  margin: 2px 0;
+  padding: 0;
+}
+.experience p{
+  margin: 5px 0;
+  
+}
+.experience ul,li{
+  margin: 2px 0;
+  padding: 0;
+}
+
+
+
+#nameT{
+  margin: 2px 0;
+}
+.pdt {
+  text-align: center;
+  margin: 5px 0;
+  margin-bottom: 20px;
+}
+
+
+.edu-experience #Loc{
+  float: right;
+    font-style: italic;
+}
+
+.certiT ul{
+  margin: 2px 0;
+    padding: 0;
+}
+.SkillsT ul{
+  margin: 2px 0;
+    padding: 0;
+}
+
+.objectives ul,li{
+  margin: 2px 0;
+    padding: 0;
+}
+
+.education h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.Thera h2{
+  font-size: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.personal-information h1, 
+.professional-information h2 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .footer-content {
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+
+
+
+#removeFooterCheckboxContainer {
+  text-align:center; /* Center align the text 
+  }
+  
+  #removeFooterCheckbox {
+  display: inline-block; /* Make it inline-block to center both horizontally */
+  vertical-align: middle; /* Align vertically to the middle */
+  } 
+
+  .download {
+    vertical-align: middle;
+    background-color: #27ae6d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .download:hover {
+    background-color: #219653;
+    }
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .resume {
+    font-size: 12px;
+    padding: 2px;
+    margin: 20px;
+  }
+.pdt{
+  font-size: 11px;
+  font-weight: 500;
+}
+
+ .resume * {
+  margin: 1px;
+  padding: 1px;
+  line-height: 1.1;
+ }
+ .resume h2, .resume h3{
+    font-size: 14px;
+    margin-bottom: 2px;
+ }
+ .experience ul,li{
+  margin-left: 10px;
+ }
+ .edu-experience ul,li{
+  margin-left: 10px;
+ }
+ .objectives ul,li{
+  margin-left: 10px;
+ }
+ .certiT ul{
+  margin-left: 10px;
+ }
+ .SkillsT ul{
+  margin-left: 10px;
+ }
+}
+/* Resume Template Styling ends here */
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/styling/feedback.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init('z-UWhM-FlCLS6HNUO');
+        })();
+    </script>
+    <script src="/scripts/feedback.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Craftify</h1>
+        <h2>Feedback</h2>
+        <form id="issue-form">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email_id" placeholder="Email" required>
+            <textarea id="issue" placeholder="write your feedback" required></textarea>
+            <button type="submit" onclick="SendMail()">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
